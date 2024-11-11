@@ -1,0 +1,31 @@
+embeddings:
+  api_base: https://ai-husseinawadwork2063ai106573915833.openai.azure.com
+  api_type: azure
+  api_version: 2023-07-01-preview
+  batch_size: '16'
+  connection:
+    id: /subscriptions/e7a806cb-6bf8-4385-a002-502cb7f462b8/resourceGroups/rg-husseinawadwork-7045_ai/providers/Microsoft.MachineLearningServices/workspaces/husseinawadwork-3016/connections/ai-husseinawadwork2063ai106573915833_aoai
+  connection_type: workspace_connection
+  deployment: text-embedding-ada-002
+  dimension: 1536
+  endpoint: https://ai-husseinawadwork2063ai106573915833.openai.azure.com/
+  kind: open_ai
+  model: text-embedding-ada-002
+  schema_version: '2'
+index:
+  api_version: 2024-05-01-preview
+  connection:
+    id: /subscriptions/e7a806cb-6bf8-4385-a002-502cb7f462b8/resourceGroups/rg-husseinawadwork-7045_ai/providers/Microsoft.MachineLearningServices/workspaces/husseinawadwork-3016/connections/AzureAISearch
+  connection_type: workspace_connection
+  endpoint: https://ai-search106573915833.search.windows.net
+  engine: azure-sdk
+  field_mapping:
+    content: content
+    embedding: contentVector
+    filename: filepath
+    metadata: meta_json_string
+    title: title
+    url: url
+  index: tutorial-index
+  kind: acs
+  semantic_configuration_name: azureml-default
